@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/index.css" />
+		<title>Online Store</title>
+	</head>
+	<body>
+		<nav id="navBar">
+			<div class="logo">
+				<img src="./imgs/bookLogo.svg" alt="bookLogo" width="10px" />
+				<a href="https://bookoutlet.ca/">bookoutlet.ca</a>
+			</div>
+
+			<div class="searchBar">
+				<input type="text" placeholder="Please type a book name you like" />
+
+				<img src="./imgs/search-1.svg" alt="search" />
+			</div>
+			<ul>
+				<li>About us</li>
+				<li>Community</li>
+				<li>Sign in</li>
+				<li id="myCart">
+					My Cart<img src="./imgs/shopping-cart.svg" alt="shopping-cart" />
+					<div class="shopCounter">0</div>
+				</li>
+			</ul>
+		</nav>
+		<div class="hidebox"></div>
+		<main>
+			<section class="time">
+				<div>
+					<span><b>Date/Time:</b></span> <span id="today"></span>
+					<span></span>
+				</div>
+				<div>
+					<span><b>End of promotion:</b></span>
+					<span id="timeDiff"></span>
+				</div>
+			</section>
+
+			<section class="cat">
+				<label for="displayFilter"
+					>Choose a Category: &nbsp;<select id="displayFilter">
+						<option value="All">All</option>
+						<option value="Art">Art</option>
+						<option value="Education">Education</option>
+						<option value="Friction">Friction</option>
+					</select>
+				</label>
+
+				<label for="dollarConver"
+					>CAD/USD
+					<select id="dollarConver">
+						<option value="true">CAD</option>
+						<option value="false">USD</option>
+					</select>
+				</label>
+			</section>
+
+			<div class="book-container" id="bookContainer">
+				<ul id="root">
+					<!-- <li class="card">
+						<img src="./imgs/book_images/art/Painting_Happiness.jpg" alt="11" />
+						<div class="div-flex">
+							<h4>ID:</h4>
+							<p>PID01</p>
+						</div>
+						<div>
+							<h4>Book Name:</h4>
+							<p>Painting Happiness: Creativity With Watercolors</p>
+						</div>
+						<div class="div-flex">
+							<h4>Price:</h4>
+							<p>$22</p>
+						</div>
+						<div class="div-flex">
+							<h4>Quantity on Hand:</h4>
+							<p>$55</p>
+						</div>
+
+						<div class="div-flex">
+							<h4>Max:</h4>
+							<p>22</p>
+						</div>
+						<div class="div-flex">
+							<h4>Category:</h4>
+							<p>love</p>
+						</div>
+						<div class="button-flex">
+							<button><strong>Detail</strong></button>
+							<button><strong>Add to cart</strong></button>
+						</div>
+					</li> -->
+				</ul>
+			</div>
+			<!-- the product detail section -->
+			<section class="detail showing">
+				<!-- <div class="upper">
+					<img src="./imgs/book_images/art/Animator_Survival_Kit.jpg" alt="" />
+					<div class="book-info">
+						<h3>Harry Potter Film Wizardry (Updated Edition)</h3>
+						<h4>Papeback</h4>
+						<div>
+							<span>price:</span>
+							<span>$99</span>
+						</div>
+						<div>
+							<span>Category:</span>
+							<span>Art</span>
+						</div>
+						<div>
+							<span>Available:</span>
+							<span>50</span>
+						</div>
+						<div>
+							<span>Quantity:</span>
+							<button class="minus">-</button><input type="text" value="1" /><button class="plus">+</button>
+						</div>
+						<div>
+							<button class="addCart">Add to Cart</button>
+						</div>
+					</div>
+					<div class="closeTag">
+						<img src="./imgs/close-line-circled.svg" alt="closetag" />
+					</div>
+				</div>
+
+				<div class="down">
+					<hr />
+					<h3>Details</h3>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nihil, officia voluptatum in nemo inventore corrupti ad nobis beatae fuga modi
+						repudiandae, nostrum magni voluptatibus similique sint sequi? Tempora, voluptatibus?
+					</p>
+					<hr />
+					<div class="rating">
+						<h3>Rating</h3>
+						<p>&nbsp;5 star</p>
+					</div>
+					<hr />
+					<h3>Review</h3>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laborum consequuntur rem commodi alias, doloremque temporibus amet omnis, dolores
+						nisi magni eius enim officiis exercitationem assumenda cum facilis voluptate sequi!
+					</p>
+				</div> -->
+			</section>
+
+			<!-- the shopping cart section -->
+			<section class="shoppingCart noShowCart">
+				<div id="topCart">
+					<h1>Your Shopping Cart</h1>
+					<img src="./imgs/close-line-circled.svg" alt="closebutton" />
+				</div>
+
+				<hr />
+
+				<div id="root2"></div>
+
+				<table id="root3"></table>
+
+				<div id="subtotal"></div>
+			</section>
+
+			<section class="reviewInputPage noShowCart">
+				<h3>Thanks for writing a review for our product</h3>
+				<div>
+					<form>
+						<label for="review">Review:</label>
+						<br />
+						<textarea id="review" required></textarea>
+						<br />
+						<label for="rating">Rating: </label>
+						<select name="rating" id="rating" required>
+							<option value="5" selected>5</option>
+							<option value="4">4</option>
+							<option value="3">3</option>
+							<option value="2">2</option>
+							<option value="1">1</option>
+						</select>
+						<br />
+						<button id="submit">submit</button>
+					</form>
+					<img src="./imgs/close-line-circled.svg" alt="closetag" width="30px" height="30px" id="reviewCloseTag" />
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<p>Thanks for the https://bookoutlet.ca/, all the data reference from there, this website is for learning purpose, not use for making any profit!</p>
+		</footer>
+		<script src="./js/data.js"></script>
+		<script src="./js/index.js"></script>
+	</body>
+</html>
